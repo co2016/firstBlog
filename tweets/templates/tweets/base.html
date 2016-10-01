@@ -7,16 +7,13 @@
     <link rel="stylesheet" href="{% static 'css/tweets.css' %}">
     <title>Entry Page</title>
 </head>
+<body>
 <div class="header">
     <h1><a href="/">Django Blog</a></h1>
 </div>
 
-{% for post in posts %}
-    <div class="post">
-        <p>published date: {{ post.published_date }}</p>
-        <h1><a href="">{{ post.title }}</a></h1>
-        <p>{{ post.text|linebreaksbr }}</p>
-    </div>
-{% endfor %}
+{% block content %}
+{% endblock %}
+</body>
 </html>
 
